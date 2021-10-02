@@ -45,15 +45,6 @@ async def start(bot, update):
             await update.reply_text(f"<b>Error:</b>\n<code>{e}</code>", True, parse_mode="html")
             LOGGER(__name__).error(e)
         return
-
-    buttons = [[
-        InlineKeyboardButton('Developers', url='https://t.me/@A6rzuxpt69drdr6t9d5'),
-        InlineKeyboardButton('Source Code 🧾', url ='https://github.com/Alif mass/Alif bot')
-    ],[
-        InlineKeyboardButton('Support 🛠', url='https://t.me/noughtyland1')
-    ],[
-        InlineKeyboardButton('Help ⚙', callback_data="help")
-    ]]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
